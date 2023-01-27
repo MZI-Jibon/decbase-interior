@@ -135,26 +135,28 @@ nav .nav-item {
     top: -70px;
     right: 18px;
 }
-.all-services .owl-nav span{
+
+.all-services .owl-nav span {
     display: block;
     justify-content: center;
-    background: #FFFFFF;
+    background: #ffffffe1;
     color: #646464;
     padding: 2px 13px 5px 12px;
-    /* height: 30px;
-    width: 30px; */
     border-radius: 50%;
     box-shadow: -1px 3px 10px rgba(0, 0, 0, 0.3);
     transition: .3s;
 }
-.all-services .owl-nav span:hover{
+
+.all-services .owl-nav span:hover {
     background: #37806B;
     color: #FFF;
 }
+
 .all-services .owl-next {
     margin-left: 15px;
 
 }
+
 .service {
     background: #FFFFFF;
     padding: 40px 0px 40px 30px;
@@ -171,21 +173,54 @@ nav .nav-item {
 .service-img i:hover {
     color: #ffffff;
 }
-.owl-item.active:nth-of-type(2) .service{
-    background: #e2a076;
+
+.all-services .owl-item.active {
+    transition: transform .3s;
 }
+
+.all-services .owl-item.active:hover {
+    transform: scale(1.05);
+}
+
+.all-services .owl-item.active+.active .service {
+    background-color: #e2a076;
+    color: #ffffff;
+
+}
+
+.all-services .owl-item.active+.active .service h4,
+.all-services .owl-item.active+.active .service p {
+    color: #ffffff;
+
+
+}
+
+.all-services .owl-item.active+.active+.active .service h4,
+.all-services .owl-item.active+.active+.active .service p {
+    color: #646464;
+
+}
+
+
+.all-services .owl-item.active+.active+.active .service {
+    background-color: white;
+    color: #333333;
+}
+
 
 
 /* SERVICE SECTION ENDS*/
 
 /* ABOUT SECTION ENDS*/
-.about-section .img-border img{
+.about-section .img-border img {
     border-radius: 120px 0px;
 }
-.about-section .img-border::before{
+
+.about-section .img-border::before {
     top: -30px;
     left: -30px !important;
 }
+
 /* ABOUT SECTION ENDS*/
 
 

@@ -1,8 +1,19 @@
 
 $(document).ready(function () {
+    $(window).scroll(function(){
+        var scroll = $(window).scrollTop();
+        if (scroll > 200) {
+          $("nav").css({"background" : "#ffffffe5", "box-shadow" : "0 0 7px #777", "transition": ".3s"});
+        }
+  
+        else{
+            $("nav").css({"background" : "#00000000", "box-shadow" : "none"});  	
+        }
+    })
+
     $('.all-services').owlCarousel({
         loop: true,
-        margin: 0,
+        margin: -10,
         nav: true,
         responsiveClass: true,
         responsive: {
