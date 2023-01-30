@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Decbase - Home</title>
+    <title> Travia - Home</title>
 
 
     <!-- Bootstrap CSS-->
@@ -14,6 +14,9 @@
 
     <!-- Font Awesome  -->
     <script src="https://kit.fontawesome.com/c84862e5aa.js" crossorigin="anonymous"></script>
+
+    <!-- JQUERY NICE SELECT JS -->
+    <link rel="stylesheet" href="vendor/jquery-nice-select-1.1.0/css/nice-select.css">
 
     <!-- Owl Carousel CSS -->
     <link rel="stylesheet" href="vendor/owl/assets/owl.carousel.min.css">
@@ -29,7 +32,7 @@
         <nav class="navbar navbar-expand-lg fixed-top ">
             <div class="container">
                 <a class="navbar-brand" href="index.html">
-                    <img src="images/decbase-logo.png" alt="">
+                    <img src="images/travia-logo.png" alt="">
                 </a>
                 <button class="navbar-toggler shadow-none border-0" type="button" data-bs-toggle="offcanvas"
                     data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
@@ -45,31 +48,30 @@
                             aria-label="Close"></button>
                     </div>
                     <div class="offcanvas-body">
-                        <ul class="navbar-nav justify-content-end flex-grow-1 ">
+                        <ul class="navbar-nav align-items-center justify-content-end flex-grow-1 ">
                             <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="#">HOME</a>
+                                <a class="nav-link active" aria-current="page" href="#">Support</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">PROJECT</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">SERVICES</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">ABOUT</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">BLOG</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">SHOP</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">CONTACT</a>
+                                <a class="nav-link" href="#">
+                                    <span> <img src="images/icons/globe.svg" alt="">
+                                    </span>
+                                    Language
+                                </a>
                             </li>
 
+
+
+
                         </ul>
-                        <button class="btn decbase-btn-1 text-nowrap py-0 ms-xl-4 my-3 my-lg-0">Sign Up</button>
+                        <div class="d-flex align-items-center">
+                            <button class="btn notification-btn position-relative"> <img src="images/icons/bell.svg"
+                                    alt="">
+                                <span class="d-block rounded-circle position-absolute top-0 end-0"></span></button>
+                        </div>
+                        <button class="btn p-0 user-btn ms-3"> <img class="rounded-circle bg-info-subtle "
+                                src="images/user-avater.png" alt="">
+                        </button>
 
 
                     </div>
@@ -82,315 +84,187 @@
     <!-- MAIN PARTS STARTS -->
 
     <!-- HERO SECTION STARTS -->
-    <section class="hero-section container ">
-        <div class="row row-cols-sm-2 align-items-center">
-            <div class="col">
-                <h5 class="mb-3">MODERN INTERIOR</h5>
-                <h1 class="mb-3">Create Your <br>
-                    Interior Design.</h1>
-                <p class="pe-xl-5 mb-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-                    veniam, quis nostrud exercitation.</p>
+    <section class="hero-section container position-relative rounded-5">
+        <!-- <img src="images/hero-bg.png" alt=""> -->
+        <div class="hero-text position-absolute ">
+            <h1>
+                Air, sleep, <br>
+                dream
+            </h1>
+            <p class="mb-3">Find and book a great experience.</p>
+            <button class="btn btn-primary rounded-5">Start your search</button>
 
-                <button class="btn decbase-btn-2">CONTACT</button>
-            </div>
-            <div class="col">
-                <div class="hero-img img-border">
-                    <img class="w-100" src="images/hero-img.png" alt="">
-                </div>
-
-
-            </div>
         </div>
 
     </section>
     <!-- HERO SECTION ENDS -->
 
-    <!-- SERVICE SECTION STARTS -->
-    <section class="service-section py-100  position-relative">
-        <img class="dot-img " src="images/dot-pattern.png" alt="">
-        <div class="container">
-            <div class="section-heading mb-5">
-                <h5>WHAT WE DO</h5>
-                <h2 class="mb-0">Our Service</h2>
+    <!-- FLIGHT SECTION STARTS -->
+    <section class="flight-section container px-5  position-relative">
+
+        <div class="flight-booking rounded-5">
+
+            <div class="tabs">
+                <ul id="tabs-nav">
+                    <li><a href="#tab1">Flights</a></li>
+                    <li><a href="#tab2">Stays</a></li>
+                    <li><a href="#tab3">Holidays</a></li>
+                </ul> <!-- END tabs-nav -->
+                <div id="tabs-content">
+
+                    <div id="tab1" class="tab-content">
+                        <div class="option-buttons d-flex gap-2">
+
+                            <input type="checkbox" class="btn-check" id="round-trip-btn" autocomplete="off">
+                            <label class="btn  btn-outline-primary rounded-pill"
+                                for="round-trip-btn">Round-trip</label><br>
+
+                            <input type="checkbox" class="btn-check" id="one-way-btn" autocomplete="off">
+                            <label class="btn btn-outline-primary" for="one-way-btn">One-way</label><br>
+
+
+                            <select>
+                                <option data-display="Select">1 adult</option>
+                                <option value="1">Some option</option>
+                                <option value="2">Another option</option>
+                            </select>
+
+                        </div>
+                        <div class="row row-cols-2 mt-3">
+                            <div class="col">
+                                <div class="row row-cols-2">
+                                    <div class="col d-flex p-20px">
+                                        <div class="flight-icon me-3">
+                                            <img src="images/icons/flight-icon-1.svg" alt="">
+                                        </div>
+                                        <div class="flight-details">
+                                            <h3 class="lh-1">Flying from</h3>
+                                            <p>Leaving from</p>
+                                        </div>
+                                    </div>
+                                    <div class="col d-flex p-20px">
+                                        <div class="flight-icon me-3">
+                                            <img src="images/icons/flight-icon-2.svg" alt="">
+                                        </div>
+                                        <div class="flight-details">
+                                            <h3 class="lh-1">Flying to</h3>
+                                            <p>Going to </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="row">
+                                    <div class="col-5 d-flex p-20px">
+                                        <div class="flight-icon me-3">
+                                            <img src="images/icons/flight-icon-3.svg" alt="">
+                                        </div>
+                                        <div class="flight-details">
+                                            <h3 class="lh-1">Departure</h3>
+                                            <p>Departure</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-7 d-flex p-20px">
+                                        <div class="flight-icon me-3">
+                                            <img src="images/icons/flight-icon-3.svg" alt="">
+                                        </div>
+                                        <div class="flight-details">
+                                            <h3 class="lh-1">Return</h3>
+                                            <p>Add a return date</p>
+                                        </div>
+                                        <div class="flight-search-button bg-primary rounded-circle p-20px ms-2">
+                                            <img src="images/icons/search-icon.svg" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div id="tab2" class="tab-content">
+                        <h2>Dante Hicks</h2>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quo, molestias ratione? Corrupti
+                            voluptate consequatur iure enim libero quis ipsum quam vel unde dignissimos reprehenderit
+                            cum natus consequuntur nostrum perferendis cupiditate modi a excepturi, molestias dicta,
+                            dolor magni fugiat nemo fuga. Deleniti, id velit quas aut sit magnam dolor distinctio
+                            mollitia?</p>
+                    </div>
+                    <div id="tab3" class="tab-content">
+                        <h2>Randall Gravesz </h2>
+                        <p>Cupiditate aspernatur consequuntur nobis possimus voluptatibus quis itaque? Eius maiores
+                            dicta mollitia vitae natus quas odit sapiente! Lorem ipsum dolor sit amet consectetur
+                            adipisicing elit. Dolore obcaecati neque sapiente necessitatibus inventore dolores quasi,
+                            totam porro sed dolorem? Quo adipisci rem, accusamus facilis commodi hic tenetur quam dicta
+                            libero. </p>
+                    </div>
+
+                </div> <!-- END tabs-content -->
+            </div> <!-- END tabs -->
+        </div>
+
+    </section>
+
+    <!-- FLIGHT SECTION ENDS -->
+
+
+    <!-- REVIEW SECTION STARTS -->
+    <section class="review-section container px-5  py-100">
+        <div class="section-heading text-center col-md-6 mx-auto">
+            <h2>Travel to make memories all around the world</h2>
+            <p>Find trips that fit a flexible lifestyle</p>
+        </div>
+        <div class="row align-items-center">
+            <div class="col-md-4">
+                <div class="travel-tips">
+                    <p class="d-inline-block text-white rounded-pill mb-3 ">01</p>
+                    <h4>Find trips that fit a flexible lifestyle</h4>
+                    <p class="mt-2">Stacks is a production-ready library of stackable content blocks built in React
+                        Native</p>
+                </div>
+                <div class="travel-tips">
+                    <p class="d-inline-block text-white rounded-pill mb-3 ">02</p>
+                    <h4>Travel with more confidence</h4>
+                    <p>Stacks is a production-ready library of stackable content blocks built in React Native</p>
+                </div>
+                <div class="travel-tips">
+                    <p class="d-inline-block text-white rounded-pill mb-3 ">03</p>
+                    <h4>See what’s really included</h4>
+                    <p>Stacks is a production-ready library of stackable content blocks built in React Native</p>
+                </div>
+                <button class="btn btn-primary rounded-5">Start your search</button>
             </div>
-
-
-            <div class="all-services owl-carousel position-relative">
-
-                <!-- SERVICE 1 -->
-                <div class="service-box  p-4">
-                    <div class="service d-flex ">
-
-                        <div class="service-img">
-                            <i class="fa-solid fa-landmark"></i>
-                        </div>
-                        <div class="service-text ms-4">
-                            <h4>Interior Design</h4>
-                            <p>Lorem ipsum dolor amet consectetur
-                                adipiscing elit sed eiusmod tempor
-                                incididunt ut labore.</p>
-                        </div>
+            <div class="col-md-8 ">
+                <div class="review-img-slider .owl-carousel">
+                   
+                    <div>
+                         <img class="d-flex ms-auto rounded-5 me-5" src="/images/aeroplane.png" alt="">
                     </div>
-                </div>
-
-                <!-- SERVICE 2 -->
-                <div class="service-box  p-4">
-                    <div class="service d-flex ">
-
-                        <div class="service-img">
-                            <i class="fa-solid fa-hotel"></i>
-                        </div>
-                        <div class="service-text ms-4">
-                            <h4>Architecture</h4>
-                            <p>Lorem ipsum dolor amet consectetur
-                                adipiscing elit sed eiusmod tempor
-                                incididunt ut labore.</p>
-                        </div>
+                    <div>
+                         <img class="d-flex ms-auto rounded-5 me-5" src="/images/aeroplane.png" alt="">
                     </div>
+                    
                 </div>
-
-                <!-- SERVICE 3 -->
-                <div class="service-box p-4">
-                    <div class="service d-flex ">
-
-                        <div class="service-img">
-                            <i class="fa-solid fa-file-contract"></i>
-                        </div>
-                        <div class="service-text ms-4">
-                            <h4>Planning</h4>
-                            <p>Lorem ipsum dolor amet consectetur
-                                adipiscing elit sed eiusmod tempor
-                                incididunt ut labore.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- SERVICE 4(1) -->
-                <div class="service-box p-4">
-                    <div class="service d-flex ">
-
-                        <div class="service-img">
-                            <i class="fa-solid fa-landmark"></i>
-                        </div>
-                        <div class="service-text ms-4">
-                            <h4>Interior Design</h4>
-                            <p>Lorem ipsum dolor amet consectetur
-                                adipiscing elit sed eiusmod tempor
-                                incididunt ut labore.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- SERVICE 5(2) -->
-                <div class="service-box  p-4">
-                    <div class="service d-flex ">
-
-                        <div class="service-img">
-                            <i class="fa-solid fa-hotel"></i>
-                        </div>
-                        <div class="service-text ms-4">
-                            <h4>Architecture</h4>
-                            <p>Lorem ipsum dolor amet consectetur
-                                adipiscing elit sed eiusmod tempor
-                                incididunt ut labore.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- SERVICE 6 (3) -->
-                <div class="service-box p-4">
-                    <div class="service d-flex ">
-
-                        <div class="service-img">
-                            <i class="fa-solid fa-file-contract"></i>
-                        </div>
-                        <div class="service-text ms-4">
-                            <h4>Planning</h4>
-                            <p>Lorem ipsum dolor amet consectetur
-                                adipiscing elit sed eiusmod tempor
-                                incididunt ut labore.</p>
-                        </div>
-                    </div>
-                </div>
+               
             </div>
         </div>
     </section>
-    <!-- SERVICE SECTION ENDS -->
-
-
-    <!-- ABOUT SECTION STARTS -->
-    <section class="about-section container py-100">
-
-        <div class="row row-cols-sm-2 align-items-center">
-
-            <div class="col">
-                <div class="hero-img img-border">
-                    <img class="w-100" src="images/sofa.png" alt="">
-                </div>
-            </div>
-
-            <div class="col ps-xl-5">
-                <div class="ps-5 ms-5">
-
-                    <h5 class="mb-3">ABOUT US</h5>
-                    <h1 class="mb-3">Interioris The Will <br>
-                        of An Epoch Mextreo</h1>
-                    <p class=" mb-5">There are many variations of passages of Lorem Ipsum available,
-                        but the majority have suffered alteration in some form injected
-                        humour, or randomised words which don't look even slightly
-                        believable.If you are going to use a passage of Lorem Ipsum,
-                        sure there isn't anything embarrassing hidden the middleof text.
-                        All the Lorem Ipsum generators on the Internettend to repeat
-                        predefined chunks as necessary,making this the first true
-                        generator on the Internet.</p>
-
-                    <button class="btn decbase-btn-2">LEARN MORE</button>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- ABOUT SECTION ENDS -->
+    
+    <!-- REVIEW SECTION ENDS -->
 
     <!-- SUCCESS SECTION STARTS -->
-    <section class="success-section position-relative py-100">
-        <img class="dot-img " src="images/dot-pattern.png" alt="">
-        <div class="container">
-            <div class="row row-cols-sm-2 align-items-center">
-                <div class="col">
-                    <h1 class="fw-bolder">20</h1>
-                    <div class="section-heading mb-5">
-                        <h2 class="mb-3">Years Of Successful <br>
-                            Working
-                            In The Market</h2>
-                    </div>
 
-                    <button class="btn decbase-btn-2">READ MORE</button>
-                </div>
-                <div class="col">
-                    <div class="hero-img img-border">
-                        <img class="w-100" src="images/shelf.png" alt="">
-                    </div>
-
-
-                </div>
-            </div>
-        </div>
-    </section>
     <!-- SUCCESS SECTION ENDS -->
+    <!-- Set up your HTML -->
 
 
     <!-- TESTIMONIALS SECTION STARTS -->
-    <section class="testimonial-section position-relative py-100">
-        <img class="dot-img " src="images/dot-pattern.png" alt="">
-        <div class="container">
-            <div class="section-heading text-center mb-5">
-                <h5>TESTIMONIALS</h5>
-                <h2 class="mb-0">Client says about us</h2>
-            </div>
-            <div class=" all-testimonials owl-carousel position-relative">
 
-                <!-- TESTIMONIAL 1 -->
-                <div class="testimonial-box  ">
-                    <div class="testimonial d-flex align-items-center p-4 my-5 me-5">
-
-                        <div class="testimonial-img ">
-                            <img class="" src="images/client-1.png" alt="">
-
-                        </div>
-                        <div class="testimonial-details ms-4">
-                            <h4>Louis Saville <span>/CEO at Google inc</span> </h4>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing <br>
-                                elit, sed do eiusmod tempor incididunt ut labore <br>
-                                et dolore magna aliqua.</p>
-                        </div>
-                    </div>
-
-                </div>
-
-                <!-- TESTIMONIAL 2 -->
-                <div class="testimonial-box  ">
-                    <div class="testimonial d-flex align-items-center p-4 my-5 me-5">
-
-                        <div class="testimonial-img ">
-                            <img class="" src="images/client-2.jpeg" alt="">
-
-                        </div>
-                        <div class="testimonial-details ms-4">
-                            <h4>Louis Saville <span>/CEO at Google inc</span> </h4>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing <br>
-                                elit, sed do eiusmod tempor incididunt ut labore <br>
-                                et dolore magna aliqua.</p>
-                        </div>
-                    </div>
-
-                </div>
-
-                <!-- TESTIMONIAL 1 -->
-                <div class="testimonial-box  ">
-                    <div class="testimonial d-flex align-items-center p-4 my-5 me-5">
-
-                        <div class="testimonial-img ">
-                            <img class="" src="images/client-1.png" alt="">
-
-                        </div>
-                        <div class="testimonial-details ms-4">
-                            <h4>Louis Saville <span>/CEO at Google inc</span> </h4>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing <br>
-                                elit, sed do eiusmod tempor incididunt ut labore <br>
-                                et dolore magna aliqua.</p>
-                        </div>
-                    </div>
-
-                </div>
-
-
-
-            </div>
-        </div>
-    </section>
 
     <!-- TESTIMONIALS SECTION ENDS -->
 
 
     <!-- BLOG SECTION STARTS -->
-    <section class="blog-section bg-light py-100">
-        <div class="container">
-            <div class="section-heading text-center mb-5">
-                <h5>LETEST NEWS</h5>
-                <h2 class="mb-0">From Our Blog</h2>
-            </div>
-            <div class="row justify-content-between">
-                <!-- BLOG 1 -->
-                <div class="col-5">
-                    <div class="blog-img img-border">
-                        <img class="w-100" src="images/blog-img-1.png" alt="">
-                    </div>
-                    <div class="blog-details ">
-                        <h3 class="mb-3">2020 Interior Design Trends </h3>
-                        <p class="pe-xl-5 mb-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                            incididunt ut labore et dolore magna aliqua.</p>
 
-                        <button class="btn decbase-btn-2">CONTINUE READING....</button>
-                    </div>
-                </div>
-
-                <!-- BLOG 2 -->
-                <div class="col-5">
-                    <div class="blog-img img-border">
-                        <img class="w-100" src="images/blog-img-2.png" alt="">
-                    </div>
-                    <div class="blog-details ">
-                        <h3 class="mb-3">28 Notable Product at ARC Interior Design </h3>
-                        <p class="pe-xl-5 mb-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                            incididunt ut labore et dolore magna aliqua.</p>
-
-                        <button class="btn decbase-btn-2">CONTINUE READING....</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
     <!-- BLOG SECTION ENDS -->
 
 
@@ -411,74 +285,7 @@
     <!-- MAIN PARTS ENDS -->
 
     <!-- FOOTER STARTS -->
-    <footer class="footer-section bg-light position-relative mt-5">
-        <img class="dot-img " src="images/dot-pattern.png" alt="">
-        <div class="top-footer container ">
-            <div class="row">
-                <!-- DECBASE -->
-                <col-12 class="col-12 col-xl-3">
-                    <a href="index.html">
-                        <img src="images/decbase-logo.png" alt="">
-                    </a>
-                    <p class="mt-2 lh-lg">But I must explain to you all this mistaken <br>
-                        idea of dencouncing pleasure.</p>
-                </col-12>
-                <!-- Quick Links -->
-                <col-12 class="col-md-6 col-lg-3 col-xl-2 ps-xl-4">
-                    <h4 class="mt-5 mt-xl-0 mb-4 ">Quick Links</h4>
-                    <ul class="list-group lh-lg">
-                        <li><a href="#"> About Our Company</a></li>
-                        <li><a href="#">Services WE provide</a></li>
-                        <li><a href="#">Career & Opportunity</a></li>
-                        <li><a href="#">Privacy & policy</a></li>
-                        <li><a href="#">Contact US</a></li>
 
-                    </ul>
-                </col-12>
-                <!-- Company -->
-                <col-12 class="col-md-6 col-lg-3 col-xl-2  ps-xl-4">
-                    <h4 class="mt-5 mt-xl-0 mb-4">Company</h4>
-                    <ul class="list-group lh-lg">
-                        <li><a href="#">About Company</a></li>
-                        <li><a href="#">Our Testimonials</a></li>
-                        <li><a href="#">Latest News</a></li>
-                        <li><a href="#">Our misson</a></li>
-                        <li><a href="#">Get a free Quote</a></li>
-
-                    </ul>
-                </col-12>
-                <!-- Contact Us -->
-                <col-12 class="col-md-6 col-lg-3 col-xl-2">
-                    <h4 class="mt-5 mt-xl-0 mb-4">Contact Us</h4>
-                    <p class=" lh-lg mb-0">Sagrada Familia, Herba <br>
-                        Street Front USA <br>
-                        brandoxide@gmail.com <br>
-                        002-568423591</p>
-                </col-12>
-                <!-- Follow Us -->
-                <col-12 class="col-md-6 col-lg-3 col-xl-3">
-                    <h4 class="mt-5 mt-xl-0 mb-4">Follow Us</h4>
-                    <div class="social-icons">
-                        <a class="me-1" href="#"><i class="fa-brands fa-facebook"></i></a>
-
-                        <a class="me-1" href="#"><i class="fa-brands fa-twitter"></i></a>
-
-                        <a class="me-1" href="#"><i class="fa-brands fa-instagram"></i></a>
-
-                        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
-
-                    </div>
-
-                </col-12>
-            </div>
-        </div>
-        <hr>
-        <div class="bottom-footer text-center fw-light py-2 mb-0">
-            <p>Copyright @ 2023 <a href="https://www.linkedin.com/in/m-z-i-jibon-33645620a/">Dev Jibon</a>. All right
-                reserved.</p>
-        </div>
-
-    </footer>
     <!-- FOOTER ENDS -->
 
 
@@ -499,6 +306,10 @@
 
     <!-- Owl Carousel JS -->
     <script src="vendor/owl/owl.carousel.min.js"></script>
+
+    <!-- JQUERY NICE SELECT JS -->
+    <script src="vendor/jquery-nice-select-1.1.0/js/jquery.nice-select.min.js"></script>
+    <script src="vendor/jquery-nice-select-1.1.0/js/jquery.js"></script>
 
     <!-- Main JS -->
     <script src="js/main.js"></script>
